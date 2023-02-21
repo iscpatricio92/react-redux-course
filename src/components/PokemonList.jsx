@@ -9,6 +9,9 @@ const PokemonList = ({ pokemons }) => {
             key={pokemon.name}
             image={pokemon.sprites.front_default}
             abilities={pokemon.abilities}
+            types={pokemon.types}
+            id={pokemon.id}
+            favorite={pokemon.favorite}
           />
         );
       })}

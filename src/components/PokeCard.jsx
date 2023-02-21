@@ -1,19 +1,27 @@
 import { Card } from "antd";
-import { StarOutlined } from "@ant-design/icons";
+import StarButton from "./StarButton";
 import Meta from "antd/es/card/Meta";
 import "./PokemonList.css";
-const PokeCard = ({ name, image, abilities }) => {
-  console.log("🚀 ~ file: PokeCard.jsx:6 ~ PokeCard ~ abilities:", abilities);
-  const habili = abilities.map((data) => {
-    return data.ability.name;
-  });
+import { useDispatch } from "react-redux";
+import { setFavorite } from "../actions";
+const PokeCard = ({ name, image, abilities, types, id, favorite }) => {
+  const dispatch = useDispatch();
+  const allAbilities = abilities
+    .map((ability) => ability.ability.name)
+    .join(", ");
+
+  const typesString = types.map((elem) => elem.type.name).join(", ");
+  const handleOnFavorite = () => {
+    dispatch(setFavorite({ pokemonId: id }));
+  };
   return (
     <Card
       title={name}
       cover={<img src={image} alt={name} />}
-      extra={<StarOutlined />}
+      extra={<StarButton isFavorite={favorite} onClick={handleOnFavorite} />}
     >
-      <Meta description={"hola"} />
+      <Meta description={typesString} />
+      <Meta description={allAbilities} />
     </Card>
   );
 };
