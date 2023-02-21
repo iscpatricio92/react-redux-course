@@ -1,6 +1,7 @@
 import { Card } from "antd";
 import { StarOutlined } from "@ant-design/icons";
 import Meta from "antd/es/card/Meta";
+import "./PokemonList.css";
 const PokeCard = ({ name }) => {
   return (
     <Card
