@@ -1,3 +1,7 @@
+# reference of the course taken
+
+https://platzi.com/cursos/react-redux-profesional/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
