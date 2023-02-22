@@ -3,7 +3,7 @@ import StarButton from "./StarButton";
 import Meta from "antd/es/card/Meta";
 import "./PokemonList.css";
 import { useDispatch } from "react-redux";
-import { setFavorite } from "../actions";
+import { setFavorite } from "../slices/dataSlice";
 const PokeCard = ({ name, image, abilities, types, id, favorite }) => {
   const dispatch = useDispatch();
   const allAbilities = abilities

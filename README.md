@@ -1,4 +1,4 @@
-# reference of the course taken
+# reference of the course
 
 https://platzi.com/cursos/react-redux-profesional/
 
